@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản</title>
+    <link rel="icon" type="image/x-icon" href="/IMAGES/Logo/Logo_LwGT.webp"> <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="../CSS_FILES/dangky.css"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!--Font Awesome-->
+</head>
+<body>
+    <div class="register">
+        <div class="register--content">
+            <!-- trong div này có logo, dưới logo là dòng chữ "đăng ký tài khoản"-->
+            <div class="register--content__logo">
+                <div class="logo"><a href="../HTML_FILES/index.htm"><img src="../IMAGES/Logo/Logo_LwGT.webp" alt="" width="40px" height="40px"></a></div>
+                <div class="title"><h1>Đăng ký tài khoản</h1></div>
+            </div>
+
+            <div class="register--content__info">
+                <h1>Họ và tên</h1>
+                <input class="ipt" id="fullname" type="text" placeholder="Nhập họ và tên đầy đủ...">
+    
+                <h1>Email</h1>
+                <input class="ipt" type="email" placeholder="Nhập email..." id="rEmail">
+    
+                <h1>Mật khẩu</h1>
+                <input class="ipt" type="password" placeholder="Nhập mật khẩu..." id="rPassword">
+    
+                <h1>Nhập lại mật khẩu</h1>
+                <input class="ipt" type="password" placeholder="Nhập lại mật khẩu..." id="cPassword">
+    
+                <!-- <button class="btndangky" id="signUp">ĐĂNG KÝ</button>
+                
+                <span><a href="../HTML_FILES/dangnhap.htm">Đã có tài khoản? Đăng nhập</a></span> -->
+            </div>
+
+            <div class="register--content__other">
+                <button class="btndangky" id="signUp">ĐĂNG KÝ</button> <br>
+                
+                <span><a href="../HTML_FILES/dangnhap.htm">Đã có tài khoản? Đăng nhập</a></span>
+
+                <p>hoặc</p>
+                <h1>Đăng nhập tài khoản với</h1>
+
+                <div class="login--google">
+                    <button id="btnGG"><i class="fa-brands fa-google"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../JS_FILES/login.js"></script>
+</body>
+</html>

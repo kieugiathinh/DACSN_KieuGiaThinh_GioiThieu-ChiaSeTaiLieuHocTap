@@ -37,10 +37,43 @@
             </div>
 
             <!-- Nút đăng ký và đăng nhập -->
-            <div class="heading--account">
-                <a href="#" class="btnDangKy">Đăng ký</a>
-                <a href="#" class="btnDangNhap">Đăng nhập</a>
+            <div class="heading--account" id="user-account">
+                <a href="../HTML_FILES/dangky.htm" class="btnDangKy">Đăng ký</a>
+                <a href="../HTML_FILES/dangnhap.htm" class="btnDangNhap">Đăng nhập</a>
             </div>
+
+            <div class="heading--account" id="logged-in-account">
+                <button id="btn-user"><i class="fa-regular fa-user"></i></button>
+                <div id="dropdown-menu" class="dropdown-menu" style="display: none;">
+                    <p id="user-name"></p>
+                    <div class="hr"><hr></div>
+                    
+                    <div class="dangtaitailieu">
+                        <button id="upload-docs">
+                            <i class="fa-solid fa-upload"></i>
+                            Đăng tải tài liệu
+                        </button>
+                    </div>
+                    
+                    <div class="hr"><hr></div>
+
+                    <div class="cactailieudathich">
+                        <button id="like-document">
+                            <i class="fa-solid fa-heart"></i>
+                            Các tài liệu đã thích
+                        </button>
+                    </div>
+                    
+                    <div class="hr"><hr></div>
+
+                    <div class="dangxuat">
+                        <button id="logout-button">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Đăng xuất
+                        </button>
+                    </div>
+                </div>
+            </div>   
         </div>
 
         <!-- Phần container -->
@@ -49,37 +82,49 @@
                 <div class="container--menu__items">
                     <ul class="menu">
                         <li>
-                            <a href="../HTML_FILES/index.htm" class="home">
+                            <a href="/HTML_FILES/index.htm" class="home">
                                 <i class="fa-solid fa-house"></i>
                                 <span>Trang chủ</span>
                             </a>
                         </li>
                         <li>
-                            <a href="../HTML_FILES/all.htm">
+                            <a href="/HTML_FILES/all.htm">
                                 <i class="fa-solid fa-folder"></i>
                                 <span>Tất cả</span>
                             </a>
                         </li>
                         <li>
-                            <a href="../HTML_FILES/math.htm">
+                            <a href="/HTML_FILES/math.htm">
                                 <i class="fa-solid fa-calculator"></i>
                                 <span>Toán</span>
                             </a>
                         </li>
                         <li>
-                            <a href="../HTML_FILES/programming.htm">
+                            <a href="/HTML_FILES/programming.htm">
                                 <i class="fa-solid fa-laptop"></i>
                                 <span>Lập trình</span>
                             </a>
                         </li>
                         <li>
-                            <a href="../HTML_FILES/other.htm">
+                            <a href="/HTML_FILES/csdl.htm">
+                                <i class="fa-solid fa-database"></i>
+                                <span>Dữ liệu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/ktmt.htm">
+                                <i class="fa-solid fa-computer"></i>
+                                <span>KTMT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/other.htm">
                                 <i class="fa-solid fa-book"></i>
                                 <span>Khác</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/HTML_FILES/news.htm">
                                 <i class="fa-solid fa-newspaper"></i>
                                 <span>Tin tức</span>
                             </a>
@@ -94,11 +139,11 @@
                 <div class="ads">
                     <div class="advertise">
                         <div class="ads-items">
-                            <img src="../IMAGES/Panner/1.jpg" alt="" class="imgs">
-                            <img src="../IMAGES/Panner/2.jpg" alt="" class="imgs">
-                            <img src="../IMAGES/Panner/3.jpg" alt="" class="imgs">
-                            <img src="../IMAGES/Panner/4.jpg" alt="" class="imgs">
-                            <img src="../IMAGES/Panner/5.jpg" alt="" class="imgs">
+                            <img src="../IMAGES/Banner/1.svg" alt="" class="imgs">
+                            <img src="../IMAGES/Banner/2.svg" alt="" class="imgs">
+                            <img src="../IMAGES/Banner/banner5.jpg" alt="" class="imgs">
+                            <img src="../IMAGES/Banner/banner5.jpg" alt="" class="imgs">
+                            <img src="../IMAGES/Banner/banner6.jpg" alt="" class="imgs">
                         </div>
                         <button class="prev">&#10094;</button>
                         <button class="next">&#10095;</button>
@@ -118,65 +163,89 @@
                 </div>
                 <!-- Các ô tài liệu -->
                 <div class="documents">
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="DaiSoTuyenTinh">
+                        <a href="/CHITIETTAILIEU/html_files/DaiSoTuyenTinh.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/DaiSoTuyenTinh.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/Toán/DaiSoTuyenTinh.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>ĐẠI SỐ TUYẾN TÍNH</p>
+                                <a href="../CHITIETTAILIEU/html_files/DaiSoTuyenTinh.htm" onclick="View_DSTT(event)">
+                                    <p>ĐẠI SỐ TUYẾN TÍNH</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="ViTichPhanA1">
+                        <a href="/CHITIETTAILIEU/html_files/ViTichPhanA1.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/ViTichPhanA1.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/Toán/ViTichPhanA1.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>VI TÍCH PHÂN A1</p>
+                                <a href="../CHITIETTAILIEU/html_files/ViTichPhanA1.htm" onclick="View_DSTT(event)">
+                                    <p>VI TÍCH PHÂN A1</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
-                                    <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
+                                    <span><i class="fa-sharp fa-solid fa-comment"></i> 2</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="DaiSoDaiCuong">
+                        <a href="/CHITIETTAILIEU/html_files/DaiSoDaiCuong.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/DaiSoDaiCuong.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/Toán/DaiSoDaiCuong.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>KỸ THUẬT LẬP TRÌNH</p>
+                                <a href="../CHITIETTAILIEU/html_files/DaiSoDaiCuong.htm" onclick="View_DSTT(event)">
+                                    <p>ĐẠI SỐ ĐẠI CƯƠNG</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
-                                    <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 880</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 675
+                                    </span>
+                                    <span><i class="fa-sharp fa-solid fa-comment"></i> 2</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="QuyHoachTuyenTinh">
+                        <a href="/CHITIETTAILIEU/html_files/QuyHoachTuyenTinh.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/QuyHoachTuyenTinh.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/Toán/QuyHoachTuyenTinh.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>NHẬP MÔN CÔNG NGHỆ THÔNG TIN</p>
+                                <a href="../CHITIETTAILIEU/html_files/QuyHoachTuyenTinh.htm" onclick="View_DSTT(event)">
+                                    <p>QUY HOẠCH TUYẾN TÍNH</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
-                                    <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
+                                    <span><i class="fa-sharp fa-solid fa-comment"></i> 2</span>
                                 </div>
                             </div>
                         </a>
@@ -185,64 +254,88 @@
 
                 <!-- Hàng 2 -->
                 <div class="documents">
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="CauTrucDuLieuGiaiThuat">
+                        <a href="/CHITIETTAILIEU/html_files/CTDL.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/CTDL.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/LapTrinh/CauTrucDuLieu.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>ĐẠI SỐ ĐẠI CƯƠNG</p>
+                                <a href="../CHITIETTAILIEU/html_files/CTDL.htm" onclick="View_DSTT(event)">
+                                    <p>CẤU TRÚC DỮ LIỆU & GIẢI THUẬT</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="KyThuatLapTrinh">
+                        <a href="/CHITIETTAILIEU/html_files/KyThuatLapTrinh.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/KyThuatLapTrinh.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/LapTrinh/KyThuatLapTrinh.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>TOÁN RỜI RẠC</p>
+                                <a href="../CHITIETTAILIEU/html_files/KyThuatLapTrinh.htm" onclick="View_DSTT(event)">
+                                    <p>KỸ THUẬT LẬP TRÌNH</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="LapTrinhWeb">
+                        <a href="/CHITIETTAILIEU/html_files/LapTrinhWeb.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/LapTrinhWeb.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/LapTrinh/LapTrinhWeb.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>CẤU TRÚC DỮ LIỆU & GIẢI THUẬT</p>
+                                <a href="../CHITIETTAILIEU/html_files/LapTrinhWeb.htm" onclick="View_DSTT(event)">
+                                    <p>LẬP TRÌNH WEB</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="LapTrinhHuongDoiTuong">
+                        <a href="/CHITIETTAILIEU/html_files/LapTrinhHuongDoiTuong.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/LapTrinhHuongDoiTuong.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/LapTrinh/LapTrinhHuongDoiTuong.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>PHƯƠNG PHÁP NCKH</p>
+                                <a href="../CHITIETTAILIEU/html_files/LapTrinhHuongDoiTuong.htm" onclick="View_DSTT(event)">
+                                    <p>LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
@@ -253,64 +346,88 @@
 
                 <!-- Hàng 3 -->
                 <div class="documents">
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="LapTrinhUngDungTrenWindows">
+                        <a href="/CHITIETTAILIEU/html_files/LapTrinhUngDungTrenWD.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/LapTrinhUngDungTrenWD.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/LapTrinh/LapTrinhUngDungTrenWD.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>VI TÍCH PHÂN A2</p>
+                                <a href="../CHITIETTAILIEU/html_files/LapTrinhUngDungTrenWD.htm" onclick="View_DSTT(event)">
+                                    <p>LẬP TRÌNH ỨNG DỤNG TRÊN WINDOWS</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="ThongKePhanTichDuLieu">
+                        <a href="/CHITIETTAILIEU/html_files/ThongKe&PhanTichDuLieu.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/ThongKe&PhanTichDuLieu.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/DuLieu/ThongKePhanTichDuLieu.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>LÝ THUYẾT ĐỒ THỊ</p>
+                                <a href="../CHITIETTAILIEU/html_files/ThongKe&PhanTichDuLieu.htm" onclick="View_DSTT(event)">
+                                    <p>THỐNG KÊ & PHÂN TÍCH DỮ LIỆU</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="CoSoDuLieu">
+                        <a href="/CHITIETTAILIEU/html_files/CoSoDuLieu.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/CoSoDuLieu.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/DuLieu/CSDL.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>CƠ SỞ DỮ LIỆU</p>
+                                <a href="../CHITIETTAILIEU/html_files/CoSoDuLieu.htm" onclick="View_DSTT(event)">
+                                    <p>CƠ SỞ DỮ LIỆU</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="DienToanDamMay">
+                        <a href="/CHITIETTAILIEU/html_files/DienToanDamMay.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/DienToanDamMay.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/DuLieu/DienToanDamMay.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>LẬP TRÌNH HƯỚNG ĐỐI TƯỢNG</p>
+                                <a href="../CHITIETTAILIEU/html_files/DienToanDamMay.htm" onclick="View_DSTT(event)">
+                                    <p>ĐIỆN TOÁN ĐÁM MÂY</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
@@ -321,64 +438,88 @@
 
                 <!-- Hàng 4 -->
                 <div class="documents">
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="PTTKHTTT">
+                        <a href="/CHITIETTAILIEU/html_files/PT&TKHTTT.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/PT&TKHTTT.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/DuLieu/PhanTichThietKeHTTT.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>QUY HOẠCH TUYẾN TÍNH</p>
+                                <a href="../CHITIETTAILIEU/html_files/PT&TKHTTT.htm" onclick="View_DSTT(event)">
+                                    <p>PHÂN TÍCH & THIẾT KẾ HTTT</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="HeDieuHanh">
+                        <a href="/CHITIETTAILIEU/html_files/HeDieuHanh.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/HeDieuHanh.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/KTMT/HeDieuHanh.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>THIẾT KẾ WEB</p>
+                                <a href="../CHITIETTAILIEU/html_files/HeDieuHanh.htm" onclick="View_DSTT(event)">
+                                    <p>HỆ ĐIỀU HÀNH</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="KienTrucMayTinh">
+                        <a href="/CHITIETTAILIEU/html_files/KienTrucMayTinh.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/KienTrucMayTinh.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/KTMT/KienTrucMayTinh.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>ANH VĂN CHUYÊN NGÀNH CNTT</p>
+                                <a href="../CHITIETTAILIEU/html_files/KienTrucMayTinh.htm" onclick="View_DSTT(event)">
+                                    <p>KIẾN TRÚC MÁY TÍNH</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="MangMayTinh">
+                        <a href="/CHITIETTAILIEU/html_files/MangMayTinh.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/MangMayTinh.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/KTMT/MangMayTinh.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>MẠNG MÁY TÍNH</p>
+                                <a href="../CHITIETTAILIEU/html_files/MangMayTinh.htm" onclick="View_DSTT(event)">
+                                    <p>MẠNG MÁY TÍNH</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
@@ -389,64 +530,44 @@
 
                 <!-- Hàng 5 -->
                 <div class="documents">
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="AVCNCNTT">
+                        <a href="/CHITIETTAILIEU/html_files/AVCNCNTT.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/AVCNCNTT.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/Khac/AVCNCNTT.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>PHÂN TÍCH & THIẾT KẾ HTTT</p>
+                                <a href="../CHITIETTAILIEU/html_files/AVCNCNTT.htm" onclick="View_DSTT(event)">
+                                    <p>ANH VĂN CHUYÊN NGÀNH CNTT</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
                         </a>
                     </div>
 
-                    <div class="document">
-                        <a href="#">
+                    <div class="document" data-id="PPNCKH">
+                        <a href="/CHITIETTAILIEU/html_files/PPNCKH.htm">
                             <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
+                                <a href="../CHITIETTAILIEU/html_files/PPNCKH.htm" onclick="View_DSTT(event)">
+                                    <img src="../IMAGES/Khac/PPNCKH.svg" alt="">
+                                </a>
                             </div>
                             <div class="document--content">
-                                <p>LẬP TRÌNH ỨNG DỤNG TRÊN WINDOWS</p>
+                                <a href="../CHITIETTAILIEU/html_files/PPNCKH.htm" onclick="View_DSTT(event)">
+                                    <p>PHƯƠNG PHÁP NGHIÊN CỨU KHOA HỌC</p>
+                                </a>
                                 <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
-                                    <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="document">
-                        <a href="#">
-                            <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
-                            </div>
-                            <div class="document--content">
-                                <p>THỐNG KÊ & PHÂN TÍCH DỮ LIỆU</p>
-                                <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
-                                    <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="document">
-                        <a href="#">
-                            <div class="document--image">
-                                <img src="../IMAGES/MonHoc/1.jpg" alt="">
-                            </div>
-                            <div class="document--content">
-                                <p>ĐIỆN TOÁN ĐÁM MÂY</p>
-                                <div class="document--info">
-                                    <span><i class="fa-solid fa-eye"></i> 999</span>
-                                    <span><i class="fa-solid fa-thumbs-up"></i> 99</span>
+                                    <span id="viewCount"><i class="fa-solid fa-eye"></i> 999</span>
+                                    <span id="likeButton" onclick="likeDocument(event)">
+                                        <i class="fa-regular fa-heart"></i> 99
+                                    </span>
                                     <span><i class="fa-sharp fa-solid fa-comment"></i> 9</span>
                                 </div>
                             </div>
@@ -454,7 +575,6 @@
                     </div>
                 </div>
                 <!-- ************** -->
-
             </div>
         </div>
 
@@ -476,7 +596,7 @@
                         <ul>
                             <li>Điện thoại: 0559 367 131</li>
                             <li>Email: kieugiathinh1301@gmail.com</li>
-                            <li>Địa chỉ: Trà Vinh</li>
+                            <li>Địa chỉ: 126, Nguyễn Thiện Thành, Phường 5, Trà Vinh</li>
                         </ul>
                     </div>
                 </div>
@@ -485,11 +605,11 @@
                 <div class="footer--container">
                     <h2>Về LwGT</h2>
                     <ul>
-                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="../HTML_FILES/intro.htm">Giới thiệu</a></li>
                         <li><a href="../HTML_FILES/contact.htm">Liên hệ</a></li>
-                        <li><a href="#">Điều khoản sử dụng</a></li>
-                        <li><a href="#">Chính sách bảo mật</a></li>
-                        <li><a href="#">Hướng dẫn sử dụng</a></li>
+                        <li><a href="../HTML_FILES/dksd.htm">Điều khoản sử dụng</a></li>
+                        <li><a href="../HTML_FILES/csbm.htm">Chính sách bảo mật</a></li>
+                        <li><a href="../HTML_FILES/hdsd.htm">Hướng dẫn sử dụng</a></li>
                     </ul>
                 </div>
     
@@ -497,8 +617,13 @@
                  <div class="footer--lienketnhanh">
                     <h2>Liên kết nhanh</h2>
                     <ul>
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">Danh mục tài liệu</a></li>
+                        <li><a href="../HTML_FILES/index.htm">Trang chủ</a></li>
+                        <li><a href="../HTML_FILES/math.htm">Tài liệu Toán</a></li>
+                        <li><a href="../HTML_FILES/programming.htm">Tài liệu Lập trình</a></li>
+                        <li><a href="../HTML_FILES/csdl.htm">Tài liệu Dữ liệu</a></li>
+                        <li><a href="../HTML_FILES/ktmt.htm">Tài liệu KTMT</a></li>
+                        <li><a href="../HTML_FILES/other.htm">Tài liệu Khác</a></li>
+                        <li><a href="../HTML_FILES/news.htm">Tin tức</a></li>
                     </ul>
                  </div>
     
@@ -513,9 +638,9 @@
                         </ul>
                     </div>
 
-                    <div class="QROcde">
+                    <div class="QRCode">
                         <h2>Tham gia gr Zalo</h2>
-                        <img src="../IMAGES/qrcode/qrcode.jpg" alt="">
+                        <img src="../IMAGES/qrcode/qrcodegrzalo.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -536,6 +661,12 @@
         </div>
     </div>
 
+    <!-- <script src="../JS_FILES/index.js"></script> -->
     <script src="../JS_FILES/index.js"></script>
+    <script type="module" src="../JS_FILES/login.js"></script>
+    <script type="module" src="../JS_FILES/search.js"></script>
+    <script src="../JS_FILES/view.js"></script>
+    <script src="../JS_FILES/likedocument.js"></script>
+    <script type="module" src="../JS_FILES/upload.js"></script>
 </body>
 </html>

@@ -5,8 +5,8 @@
     /* border: 1px solid; */
     display: flex;
 
-    /* justify-content: center; */
-    /* align-items: center; */
+    justify-content: center;
+    align-items: center;
 }
 
 .liuliu{
@@ -97,6 +97,15 @@
     background-color: rgb(1, 248, 1);
     color: black;
 }
+
+/* gg map */
+.ggmap{
+    padding-top: 235px;
+}
+
+/* *********** */
+
+
 
 
 /* Toàn bộ thanh cuộn */
