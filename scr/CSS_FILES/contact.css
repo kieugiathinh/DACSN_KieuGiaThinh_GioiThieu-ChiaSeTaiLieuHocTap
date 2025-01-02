@@ -1,0 +1,137 @@
+.container--lienhe{
+    width: 100%;
+    height: auto;
+    padding-left: 50px;
+    /* border: 1px solid; */
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.liuliu{
+    width: 50%;
+    /* border: 1px solid; */
+}
+
+.container--lienhe__info h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 2em;
+    font-weight: 500;
+}
+
+.container--lienhe__adress{
+    color: black;
+    font-size: 1em;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 50px;
+    max-width: 500px;
+}
+
+.container--lienhe__adress i {
+    color: black;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+/* Form liên hệ */
+.container--lienhe__form{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid; */
+    padding-top: 50px;
+}
+
+.container--lienhe__form h1{
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.ipt {
+    width: 500px;
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: black;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.ipt:focus{
+    border-color: rgb(12, 12, 228);
+}
+
+.iptnoidung {
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+    resize: none;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.btnguidi{
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-color: rgb(92, 214, 92);
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    color: rgb(38, 36, 36);
+    font-weight: 500;
+    transition: 0.5s ease;
+    float: left;
+    margin-left: 360px;
+    margin-bottom: 50px;
+}
+
+.btnguidi:hover{
+    background-color: rgb(1, 248, 1);
+    color: black;
+}
+
+/* gg map */
+.ggmap{
+    padding-top: 235px;
+}
+
+/* *********** */
+
+
+
+
+/* Toàn bộ thanh cuộn */
+::-webkit-scrollbar {
+    width: 12px; /* Chiều rộng thanh trượt dọc */
+    height: 12px; /* Chiều cao thanh trượt ngang */
+}
+
+/* Phần track (nền của thanh cuộn) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Màu nền */
+    border-radius: 10px; /* Bo góc cho track */
+}
+
+/* Phần thumb (phần kéo được trên thanh cuộn) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Màu của thumb */
+    border-radius: 10px; /* Bo góc */
+}
+
+/* Thumb khi hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Màu khi hover */
+}
+
+/* Thanh cuộn góc (góc giữa cuộn dọc và ngang) */
+::-webkit-scrollbar-corner {
+    background: #f1f1f1; /* Màu nền của góc */
+}

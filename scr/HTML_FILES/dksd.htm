@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều khoản sử dụng - LwGT</title>
+    <link rel="icon" type="image/x-icon" href="../IMAGES/Logo/Logo_LwGT.webp"> <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="../CSS_FILES/index.css"> 
+    <link rel="stylesheet" type="text/css" href="../CSS_FILES/dksd.css"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--Khai báo W3.CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!--Font Awesome-->
+</head>
+<body>
+    <div class="DACSN">
+        <!-- Header -->
+        <div class="heading">
+            <div class="heading--logo">
+                <div class="heading--logo__logo">
+                    <a href="../HTML_FILES/index.htm"><img class="img--logo" src="../IMAGES/Logo/Logo_LwGT.webp" alt=""></a>
+                </div>
+
+                <div class="heading--logo__name">
+                    <a href="../HTML_FILES/index.htm">Learning with GiaThinh</a>
+                </div>
+            </div>
+
+            <!-- ô tìm kiếm và kính lúp -->
+            <div class="heading--search">
+                <div class="heading--search__iptSearch">
+                    <input type="text" placeholder="Tìm kiếm tài liệu...">
+                </div>
+
+                <div class="heading--search__kinhlup">
+                    <i class='bx bx-search-alt-2'></i>
+                </div>
+            </div>
+
+            <!-- Nút đăng ký và đăng nhập -->
+            <div class="heading--account" id="user-account">
+                <a href="../HTML_FILES/dangky.htm" class="btnDangKy">Đăng ký</a>
+                <a href="../HTML_FILES/dangnhap.htm" class="btnDangNhap">Đăng nhập</a>
+            </div>
+
+            <div class="heading--account" id="logged-in-account">
+                <button id="btn-user"><i class="fa-regular fa-user"></i></button>
+                <div id="dropdown-menu" class="dropdown-menu" style="display: none;">
+                    <p id="user-name"></p>
+                    <div class="hr"><hr></div>
+                    
+                    <div class="dangtaitailieu">
+                        <button id="upload-docs">
+                            <i class="fa-solid fa-upload"></i>
+                            Đăng tải tài liệu
+                        </button>
+                    </div>
+                    
+                    <div class="hr"><hr></div>
+
+                    <div class="cactailieudathich">
+                        <button id="like-document">
+                            <i class="fa-solid fa-heart"></i>
+                            Các tài liệu đã thích
+                        </button>
+                    </div>
+                    
+                    <div class="hr"><hr></div>
+
+                    <div class="dangxuat">
+                        <button id="logout-button">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Đăng xuất
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phần container -->
+        <div class="container">
+            <div class="container--menu">
+                <div class="container--menu__items">
+                    <ul class="menu">
+                        <li>
+                            <a href="/HTML_FILES/index.htm">
+                                <i class="fa-solid fa-house"></i>
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/all.htm">
+                                <i class="fa-solid fa-folder"></i>
+                                <span>Tất cả</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/math.htm">
+                                <i class="fa-solid fa-calculator"></i>
+                                <span>Toán</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/programming.htm">
+                                <i class="fa-solid fa-laptop"></i>
+                                <span>Lập trình</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/csdl.htm">
+                                <i class="fa-solid fa-database"></i>
+                                <span>Dữ liệu</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/ktmt.htm">
+                                <i class="fa-solid fa-computer"></i>
+                                <span>KTMT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/other.htm">
+                                <i class="fa-solid fa-book"></i>
+                                <span>Khác</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/news.htm">
+                                <i class="fa-solid fa-newspaper"></i>
+                                <span>Tin tức</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Lời giới thiệu -->
+            <div class="container--content">
+                <div class="noidung">
+                    <div class="container--content__gioithieu">
+                        <h1>ĐIỀU KHOẢN SỬ DỤNG</h1>
+                        <span>Chào mừng bạn đến với <i>Learning with GiaThinh!</i> Việc truy cập và sử dụng trang web của chúng tôi đồng nghĩa với việc bạn đồng ý với các điều khoản sử dụng dưới đây. Vui lòng đọc kỹ các điều khoản trước khi sử dụng.</span>
+                    </div>
+    
+                    <div class="container--content__1">
+                        <h2>1. Chấp nhận điều khoản</h2>
+                        <span>Bằng việc truy cập hoặc sử dụng trang web, bạn đồng ý bị ràng buộc bởi các điều khoản này. Nếu bạn không đồng ý, vui lòng ngừng sử dụng trang web.</span>
+                    </div>
+    
+                    <div class="container--content__2">
+                        <h2>2. Dịch vụ của chúng tôi</i></h2>
+                        <span><i>Learning with GiaThinh</i> cung cấp các tài liệu học tập dưới dạng file để tải xuống.</span>
+                        <span>Nội dung được tổ chức theo từng môn học, giúp người dùng dễ dàng tìm kiếm và sử dụng.</span>
+                    </div>
+    
+                    <div class="container--content__3">
+                        <h2>3. Quyền và trách nhiệm người dùng</h2>
+                        <span>
+                            <b>Người dùng có quyền:</b> <br>
+                            &emsp;Tải xuống các file tài liệu được chia sẻ trên website cho mục đích cá nhân, phi thương mại. <br>
+                            &emsp;Đánh giá và chia sẻ ý kiến về tài liệu. <br>
+                            <b>Người dùng cam kết:</b> <br>
+                            &emsp;Không sử dụng các file tài liệu cho mục đích thương mại khi chưa được sự cho phép. <br>
+                            &emsp;Không tải lên hoặc chia sẻ nội dung vi phạm pháp luật, bản quyền, hoặc có tính chất tiêu cực.
+                        </span>
+                    </div>
+    
+                    <div class="container--content__4">
+                        <h2>4. Quyền sở hữu trí tuệ</h2>
+                        <span>
+                            Tất cả các tài liệu, bao gồm nhưng không giới hạn ở các file tải xuống, thuộc quyền sở hữu của <i>Learning with GiaThinh</i> hoặc các tác giả đã cấp phép.
+                        </span>
+                    </div>
+
+                    <div class="container--content__5">
+                        <h2>5. Miễn trừ trách nhiệm</h2>
+                        <span>
+                            Các tài liệu được cung cấp với mục đích tham khảo. Chúng tôi không đảm bảo tính chính xác tuyệt đối của nội dung và không chịu trách nhiệm với bất kỳ thiệt hại nào phát sinh từ việc sử dụng tài liệu.
+                        </span>
+                    </div>
+
+                    <div class="container--content__6">
+                        <h2>6. Chính sách bảo mật</h2>
+                        <span>
+                            Mọi thông tin cá nhân mà bạn cung cấp sẽ được bảo mật theo <a href="../HTML_FILES/csbm.htm" class="csbm">Chính sách Bảo mật</a>.
+                        </span>
+                    </div>
+
+                    <div class="container--content__7">
+                        <h2>7. Thay đổi điều khoản</h2>
+                        <span>
+                            <i>Learning with GiaThinh</i> có quyền thay đổi hoặc cập nhật các điều khoản bất kỳ lúc nào. Những thay đổi sẽ được thông báo trên website.
+                        </span>
+                    </div>
+
+                    <div class="container--content__8">
+                        <h2>8. Luật pháp áp dụng</h2>
+                        <span>
+                            Các điều khoản này được điều chỉnh và hiểu theo pháp luật Việt Nam.
+                        </span>
+                    </div>
+
+                    <div class="container--content__end">
+                        <span>Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với chúng tôi qua email: <b><i>kieugiathinh1301@gmail.com</i></b></span>
+                        <span><b>Cảm ơn bạn đã đồng hành cùng <i>Learning with GiaThinh!</i></b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phần footer -->
+        <div class="footer">
+            <!-- phần logo + thông tin các nhân  -->
+            <div class="footer--sup">
+                <div class="footer--user">
+                    <div class="footer--user__logo">
+                        <div class="logo">
+                            <a href="../HTML_FILES/index.htm"><img src="../IMAGES/Logo/Logo_LwGT.webp" width="40px" alt=""></a>
+                        </div>    
+                        <div class="name">
+                            <a href="../HTML_FILES/index.htm">Learning with GiaThinh</a>
+                        </div>
+                    </div>
+    
+                    <div class="footer--user__information">
+                        <ul>
+                            <li>Điện thoại: 0559 367 131</li>
+                            <li>Email: kieugiathinh1301@gmail.com</li>
+                            <li>Địa chỉ: 126, Nguyễn Thiện Thành, Phường 5, Trà Vinh</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Về LwGT -->
+                <div class="footer--container">
+                    <h2>Về LwGT</h2>
+                    <ul>
+                        <li><a href="../HTML_FILES/intro.htm">Giới thiệu</a></li>
+                        <li><a href="../HTML_FILES/contact.htm">Liên hệ</a></li>
+                        <li><a href="../HTML_FILES/dksd.htm">Điều khoản sử dụng</a></li>
+                        <li><a href="../HTML_FILES/csbm.htm">Chính sách bảo mật</a></li>
+                        <li><a href="../HTML_FILES/hdsd.htm">Hướng dẫn sử dụng</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Liên kết nhanh -->
+                 <div class="footer--lienketnhanh">
+                    <h2>Liên kết nhanh</h2>
+                    <ul>
+                        <li><a href="../HTML_FILES/index.htm">Trang chủ</a></li>
+                        <li><a href="../HTML_FILES/math.htm">Tài liệu Toán</a></li>
+                        <li><a href="../HTML_FILES/programming.htm">Tài liệu Lập trình</a></li>
+                        <li><a href="../HTML_FILES/csdl.htm">Tài liệu Dữ liệu</a></li>
+                        <li><a href="../HTML_FILES/ktmt.htm">Tài liệu KTMT</a></li>
+                        <li><a href="../HTML_FILES/other.htm">Tài liệu Khác</a></li>
+                        <li><a href="../HTML_FILES/news.htm">Tin tức</a></li>
+                    </ul>
+                 </div>
+    
+                <!-- Liên kết mạng xã hội(kết nối với chúng tôi) -->
+                <div class="footer--ketnoivoichungtoi">
+                    <h2>Kết nối với chúng tôi</h2>
+                    <div class="icon_social">
+                        <ul>
+                            <li><a href="https://www.facebook.com/kieugiathinh"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/giathinh_1301"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="QRCode">
+                        <h2>Tham gia gr Zalo</h2>
+                        <img src="../IMAGES/qrcode/qrcodegrzalo.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <!-- Thông báo bản quyền -->
+                <div class="footer--coppyright">
+                    <h2>&copy; 2024 Learning with GiaThinh. All rights reserved.</h2>
+                </div>
+            </div>        
+        </div>
+    </div>
+    <script src="../JS_FILES/index.js"></script>
+    <script type="module" src="../JS_FILES/login.js"></script>
+    <script type="module" src="../JS_FILES/search.js"></script>
+</body>
+</html>

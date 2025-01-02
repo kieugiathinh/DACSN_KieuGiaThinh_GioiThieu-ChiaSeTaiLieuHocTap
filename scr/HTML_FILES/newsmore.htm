@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tin tức - Xem thêm</title>
+    <link rel="icon" type="image/x-icon" href="../IMAGES/Logo/Logo_LwGT.webp"> <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="../CSS_FILES/index.css"> 
+    <link rel="stylesheet" type="text/css" href="../CSS_FILES/news.css"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> <!--Khai báo W3.CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"> <!--Khai báo Boxicons-->
+</head>
+<body>
+    <div class="DACSN">
+        <!-- Header -->
+        <div class="heading">
+            <div class="heading--logo">
+                <div class="heading--logo__logo">
+                    <a href="../HTML_FILES/index.htm"><img class="img--logo" src="../IMAGES/Logo/Logo_LwGT.webp" alt=""></a>
+                </div>
+
+                <div class="heading--logo__name">
+                    <a href="../HTML_FILES/index.htm">Learning with GiaThinh</a>
+                </div>
+            </div>
+
+            <!-- ô tìm kiếm và kính lúp -->
+            <div class="heading--search">
+                <div class="heading--search__iptSearch">
+                    <input type="text" placeholder="Tìm kiếm tài liệu...">
+                </div>
+
+                <div class="heading--search__kinhlup">
+                    <i class='bx bx-search-alt-2'></i>
+                </div>
+            </div>
+
+            <!-- Nút đăng ký và đăng nhập -->
+            <div class="heading--account" id="user-account">
+                <a href="../HTML_FILES/dangky.htm" class="btnDangKy">Đăng ký</a>
+                <a href="../HTML_FILES/dangnhap.htm" class="btnDangNhap">Đăng nhập</a>
+            </div>
+
+            <div class="heading--account" id="logged-in-account">
+                <button id="btn-user"><i class="fa-regular fa-user"></i></button>
+                <div id="dropdown-menu" class="dropdown-menu" style="display: none;">
+                    <p id="user-name"></p>
+                    <div class="hr"><hr></div>
+                    
+                    <div class="dangtaitailieu">
+                        <button id="upload-docs">
+                            <i class="fa-solid fa-upload"></i>
+                            Đăng tải tài liệu
+                        </button>
+                    </div>
+                    
+                    <div class="hr"><hr></div>
+
+                    <div class="cactailieudathich">
+                        <button id="like-document">
+                            <i class="fa-solid fa-heart"></i>
+                            Các tài liệu đã thích
+                        </button>
+                    </div>
+                    
+                    <div class="hr"><hr></div>
+
+                    <div class="dangxuat">
+                        <button id="logout-button">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            Đăng xuất
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Phần container -->
+        <div class="container">
+            <div class="container--menu">
+                <div class="container--menu__items">
+                    <ul class="menu">
+                        <li>
+                            <a href="/HTML_FILES/index.htm">
+                                <i class="fa-solid fa-house"></i>
+                                <span>Trang chủ</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/all.htm">
+                                <i class="fa-solid fa-folder"></i>
+                                <span>Tất cả</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/math.htm">
+                                <i class="fa-solid fa-calculator"></i>
+                                <span>Toán</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/programming.htm">
+                                <i class="fa-solid fa-laptop"></i>
+                                <span>Lập trình</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/csdl.htm">
+                                <i class="fa-solid fa-database"></i>
+                                <span>CSDL</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/ktmt.htm">
+                                <i class="fa-solid fa-computer"></i>
+                                <span>KTMT</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/other.htm">
+                                <i class="fa-solid fa-book"></i>
+                                <span>Khác</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/HTML_FILES/news.htm" class="home">
+                                <i class="fa-solid fa-newspaper"></i>
+                                <span>Tin tức</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- slideshow và nội dung bên dưới -->
+            <div class="container--content">
+                <main>
+                    <div class="featured-news">
+                        <h2>Tin tức nổi bật</h2>
+                        <div class="featured-grid">
+                            <article class="featured-card">
+                                <a href="https://vnexpress.net/chatgpt-sap-tren-toan-cau-4826834.html">
+                                    <img src="/IMAGES/TinTuc/chatgptsap.jpg" alt="AI News">
+                                </a>
+                                <div class="card-content">
+                                    <span class="category">AI & ML</span>
+                                    <a href="https://vnexpress.net/chatgpt-sap-tren-toan-cau-4826834.html">
+                                        <h3>ChatGPT sập trên toàn cầu</h3>
+                                    </a>
+                                    <p>Nhiều người dùng không thể truy cập ChatGPT và Sora trên trình duyệt,...</p>
+                                    <div class="card-footer">
+                                        <span class="date">12/12/2024</span>
+                                        <button class="like-btn" data-id="1">
+                                            <i class="far fa-heart"></i>
+                                            <span>3000</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+            
+                    <div class="news-grid">
+                        <article class="news-card">
+                            <a href="https://vnexpress.net/nam-sinh-dat-diem-cao-nhat-the-gioi-mon-toan-as-level-4819638.html">
+                                <img src="/IMAGES/TinTuc/namsinhdatdiemcao.jpg" alt="Math News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">Toán học</span>
+                                <a href="https://vnexpress.net/nam-sinh-dat-diem-cao-nhat-the-gioi-mon-toan-as-level-4819638.html">
+                                    <h3>Nam sinh đạt điểm cao nhất thế giới môn Toán AS Level</h3>
+                                </a>
+                                <p>Nguyễn Minh Đăng vào top điểm Toán cao nhất thế giới trong kỳ thi lấy chứng chỉ quốc tế AS Level, với điểm tuyệt đối...</p>
+                                <div class="card-footer">
+                                    <span class="date">25/11/2024</span>
+                                    <button class="like-btn" data-id="2">
+                                        <i class="far fa-heart"></i>
+                                        <span>1340</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+            
+                        <article class="news-card">
+                            <a href="https://vnexpress.net/sinh-vien-it-can-biet-lap-trinh-truoc-khi-vao-dai-hoc-4811151.html">
+                                <img src="/IMAGES/TinTuc/ITcanbietlaptrinh.jpg" alt="Programming News">
+                            </a>
+                            
+                            <div class="card-content">
+                                <span class="category">Lập trình</span>
+                                <a href="https://vnexpress.net/sinh-vien-it-can-biet-lap-trinh-truoc-khi-vao-dai-hoc-4811151.html">
+                                    <h3>'Sinh viên IT cần biết lập trình trước khi vào đại học'</h3>
+                                </a>
+                                <p>Sinh viên cần biết ít nhất 1-2 ngôn ngữ lập trình trước khi vào đại học, làm nền tảng để học chuyên sâu, theo Giám đốc...</p>
+                                <div class="card-footer">
+                                    <span class="date">02/11/2024</span>
+                                    <button class="like-btn" data-id="3">
+                                        <i class="far fa-heart"></i>
+                                        <span>986</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+            
+                        <article class="news-card">
+                            <a href="https://vnexpress.net/cach-big-data-va-ai-ho-tro-doanh-nghiep-ra-quyet-dinh-4590371.html">
+                                <img src="/IMAGES/TinTuc/bigdata.png" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">Dữ liệu</span>
+                                <a href="https://vnexpress.net/cach-big-data-va-ai-ho-tro-doanh-nghiep-ra-quyet-dinh-4590371.html">
+                                    <h3>Cách Big Data và AI hỗ trợ doanh nghiệp ra quyết định</h3>
+                                </a>
+                                <p>Theo chuyên gia, Big Data và AI có thể kết hợp để phân tích dữ liệu, đưa ra dự báo, hỗ trợ doanh nghiệp ra quyết định, tăng...</p>
+                                <div class="card-footer">
+                                    <span class="date">12/04/2023</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>725</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Thay từ đây -->
+                        <article class="news-card">
+                            <a href="https://vnexpress.net/25-code-moi-tai-google-duoc-viet-bang-ai-4810832.html">
+                                <img src="/IMAGES/TinTuc/gg.png" alt="">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">AI & ML</span>
+                                <a href="https://vnexpress.net/25-code-moi-tai-google-duoc-viet-bang-ai-4810832.html">
+                                    <h3>25% code mới tại Google được viết bằng AI</h3>
+                                </a>
+                                <p>Sundar Pichai, CEO Alphabet, cho biết Google đang sử dụng trí tuệ nhân tạo để tạo ra hơn một phần tư các đoạn code...</p>
+                                <div class="card-footer">
+                                    <span class="date">01/11/2024</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>680</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <a href="https://vnexpress.net/day-toan-khong-chi-de-giai-phuong-trinh-tinh-dao-ham-4825354.html">
+                                <img src="/IMAGES/TinTuc/daytoan.jpg" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">Toán học</span>
+                                <a href="https://vnexpress.net/day-toan-khong-chi-de-giai-phuong-trinh-tinh-dao-ham-4825354.html">
+                                    <h3>Dạy Toán không chỉ để giải phương trình, tính đạo hàm</h3>
+                                </a>
+                                <p>Khi AI có thể giải Toán nhanh hơn người, việc dạy Toán để học sinh hiểu quan trọng hơn là biết cách tính đạo hàm, ...</p>
+                                <div class="card-footer">
+                                    <span class="date">08/12/2024</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>607</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <a href="https://vnexpress.net/ai-lap-muu-phan-khang-khi-nghi-sap-bi-thay-the-4825746.html">
+                                <img src="/IMAGES/TinTuc/AIlapammuu.jpg" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">AI & ML</span>
+                                <a href="https://vnexpress.net/ai-lap-muu-phan-khang-khi-nghi-sap-bi-thay-the-4825746.html">
+                                    <h3>AI lập mưu phản kháng khi nghĩ sắp bị thay thế</h3>
+                                </a>
+                                <p>OpenAI o1 được đánh giá tiệm cận siêu trí tuệ AGI, nhưng gây lo ngại khi có khả năng thực hiện hàng loạt...</p>
+                                <div class="card-footer">
+                                    <span class="date">11/12/2024</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>1003</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <a href="https://vnexpress.net/sieu-tri-tue-nhan-tao-agi-dang-dan-hien-dien-4825386.html">
+                                <img src="/IMAGES/TinTuc/sieutritueAGI.jpg" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">AI & ML</span>
+                                <a href="https://vnexpress.net/sieu-tri-tue-nhan-tao-agi-dang-dan-hien-dien-4825386.html">
+                                    <h3>Siêu trí tuệ nhân tạo AGI 'đang dần hiện diện'</h3>
+                                </a>
+                                <p>ChatGPT-o1 của OpenAI được một số chuyên gia nhận định là mô hình tiệm cận với siêu trí tuệ AGI...</p>
+                                <div class="card-footer">
+                                    <span class="date">09/12/2024</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>852</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <a href="https://vnexpress.net/microsoft-bi-dieu-tra-chong-doc-quyen-4821264.html">
+                                <img src="/IMAGES/TinTuc/microsoft.jpg" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">Điện toán đám mây</span>
+                                <a href="https://vnexpress.net/microsoft-bi-dieu-tra-chong-doc-quyen-4821264.html">
+                                    <h3>Microsoft bị điều tra chống độc quyền</h3>
+                                </a>
+                                <p>Ủy ban Thương mại Liên bang Mỹ (FTC) mở cuộc điều tra quy mô lớn với Microsoft, về hoạt động cấp phép phần mềm và...</p>
+                                <div class="card-footer">
+                                    <span class="date">28/11/2024</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>725</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <a href="https://vnexpress.net/bat-luc-tuong-tac-voi-chatbot-khi-mua-hang-online-4826444.html">
+                                <img src="/IMAGES/TinTuc/chatbox.jpg" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">Thương mại điện tử</span>
+                                <a href="https://vnexpress.net/bat-luc-tuong-tac-voi-chatbot-khi-mua-hang-online-4826444.html">
+                                    <h3>'Bất lực' tương tác với chatbot khi mua hàng online</h3>
+                                </a>
+                                <p>Thanh Long (TP HCM) phải đến cửa hàng mua đồ sau bốn ngày chưa thể nhận hàng online vì cuộc trao đổi "như đi vào...</p>
+                                <div class="card-footer">
+                                    <span class="date">13/12/2023</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>568</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Thêm tin tức -->
+                        <article class="news-card">
+                            <a href="https://thanhnien.vn/python-la-ngon-ngu-lap-trinh-pho-bien-nhat-nam-2024-tren-github-185241104230503535.htm">
+                                <img src="/IMAGES/TinTuc/python.jpg" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">Lập trình</span>
+                                <a href="https://thanhnien.vn/python-la-ngon-ngu-lap-trinh-pho-bien-nhat-nam-2024-tren-github-185241104230503535.htm">
+                                    <h3>Python là ngôn ngữ lập trình phổ biến nhất năm 2024 trên GitHub</h3>
+                                </a>
+                                <p>GitHub vừa ghi nhận Python vượt qua JavaScript để trở thành ngôn ngữ lập trình phổ biến nhất nhờ vào sự...</p>
+                                <div class="card-footer">
+                                    <span class="date">11/11/2024</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>742</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <a href="https://vnexpress.net/nguoi-viet-tim-gemini-nhieu-hon-chatgpt-4827662.html">
+                                <img src="/IMAGES/TinTuc/gemini.png" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">AI & ML</span>
+                                <a href="https://vnexpress.net/nguoi-viet-tim-gemini-nhieu-hon-chatgpt-4827662.html">
+                                    <h3>Người Việt tìm 'Gemini' nhiều hơn 'ChatGPT'</h3>
+                                </a>
+                                <p>Trong danh sách công cụ AI được tìm kiếm nhiều nhất trên Google năm 2024, Gemini vượt các đối thủ như...</p>
+                                <div class="card-footer">
+                                    <span class="date">14/12/2024</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>769</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <a href="https://cafef.vn/24-thang-toi-ai-se-khien-lap-trinh-vien-het-cua-viet-code-188240821235501446.chn">
+                                <img src="/IMAGES/TinTuc/24thangtoi.webp" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">AI & Lập trình</span>
+                                <a href="https://cafef.vn/24-thang-toi-ai-se-khien-lap-trinh-vien-het-cua-viet-code-188240821235501446.chn">
+                                    <h3>24 tháng tới, AI sẽ khiến lập trình viên 'hết cửa' viết code?</h3>
+                                </a>
+                                <p>
+                                    Một cuộc trò chuyện nội bộ của CEO Amazon Web Services, ông Matt Garman đã chỉ ra rằng, trong vòng hai năm...</p>
+                                <div class="card-footer">
+                                    <span class="date">22/08/2024</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>849</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <a href="https://cafef.vn/phan-mem-coder-mat-4-tuan-de-lam-bot-chatgpt-chi-ton-7-phut-cach-ai-tu-van-hanh-cong-ty-lap-trinh-cho-thay-con-nguoi-khong-co-tuoi-188231102055830565.chn">
+                                <img src="/IMAGES/TinTuc/coder.webp" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">AI & Lập trình</span>
+                                <a href="https://cafef.vn/phan-mem-coder-mat-4-tuan-de-lam-bot-chatgpt-chi-ton-7-phut-cach-ai-tu-van-hanh-cong-ty-lap-trinh-cho-thay-con-nguoi-khong-co-tuoi-188231102055830565.chn">
+                                    <h3>Phần mềm coder mất 4 tuần để làm, bot ChatGPT chỉ tốn 7 phút...</h3>
+                                </a>
+                                <p>Nhiều người đã đặt ra câu hỏi: Nếu AI đã lập trình hiệu quả đến vậy, liệu đây đã là hồi kết cho các...</p>
+                                <div class="card-footer">
+                                    <span class="date">02/11/2023</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>861</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <a href="https://kenh14.vn/so-nguyen-to-lon-nhat-duoc-biet-den-la-gi-215241104200223324.chn">
+                                <img src="/IMAGES/TinTuc/songuyento.webp" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">Toán học</span>
+                                <a href="https://kenh14.vn/so-nguyen-to-lon-nhat-duoc-biet-den-la-gi-215241104200223324.chn">
+                                    <h3>Số nguyên tố lớn nhất được biết đến là gì?</h3>
+                                </a>
+                                <p>Có vô số số nguyên tố, nhưng số lớn nhất mà chúng ta biết có tên M136279841 và chứa hơn 41 triệu chữ số...</p>
+                                <div class="card-footer">
+                                    <span class="date">05/11/2024</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>982</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="news-card">
+                            <a href="https://kenh14.vn/con-so-13532385396179-co-gi-dac-biet-215241027193114811.chn">
+                                <img src="/IMAGES/TinTuc/sodacbiet.webp" alt="Data Science News">
+                            </a>
+                            <div class="card-content">
+                                <span class="category">Toán học</span>
+                                <a href="https://kenh14.vn/con-so-13532385396179-co-gi-dac-biet-215241027193114811.chn">
+                                    <h3>Con số 13,532,385,396,179 có gì đặc biệt?</h3>
+                                </a>
+                                <p>Số 13,532,385,396,179 - nghe có vẻ là một dãy số ngẫu nhiên và không mang ý nghĩa gì đặc biệt, nhưng...</p>
+                                <div class="card-footer">
+                                    <span class="date">28/10/2024</span>
+                                    <button class="like-btn" data-id="4">
+                                        <i class="far fa-heart"></i>
+                                        <span>623</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Phần footer -->
+        <div class="footer">
+            <!-- phần logo + thông tin các nhân  -->
+            <div class="footer--sup">
+                <div class="footer--user">
+                    <div class="footer--user__logo">
+                        <div class="logo">
+                            <a href="../HTML_FILES/index.htm"><img src="../IMAGES/Logo/Logo_LwGT.webp" width="40px" alt=""></a>
+                        </div>    
+                        <div class="name">
+                            <a href="../HTML_FILES/index.htm">Learning with GiaThinh</a>
+                        </div>
+                    </div>
+    
+                    <div class="footer--user__information">
+                        <ul>
+                            <li>Điện thoại: 0559 367 131</li>
+                            <li>Email: kieugiathinh1301@gmail.com</li>
+                            <li>Địa chỉ: 126, Nguyễn Thiện Thành, Phường 5, Trà Vinh</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Về LwGT -->
+                <div class="footer--container">
+                    <h2>Về LwGT</h2>
+                    <ul>
+                        <li><a href="../HTML_FILES/intro.htm">Giới thiệu</a></li>
+                        <li><a href="../HTML_FILES/contact.htm">Liên hệ</a></li>
+                        <li><a href="../HTML_FILES/dksd.htm">Điều khoản sử dụng</a></li>
+                        <li><a href="../HTML_FILES/csbm.htm">Chính sách bảo mật</a></li>
+                        <li><a href="../HTML_FILES/hdsd.htm">Hướng dẫn sử dụng</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Liên kết nhanh -->
+                 <div class="footer--lienketnhanh">
+                    <h2>Liên kết nhanh</h2>
+                    <ul>
+                        <li><a href="../HTML_FILES/index.htm">Trang chủ</a></li>
+                        <li><a href="../HTML_FILES/math.htm">Tài liệu Toán</a></li>
+                        <li><a href="../HTML_FILES/programming.htm">Tài liệu Lập trình</a></li>
+                        <li><a href="../HTML_FILES/csdl.htm">Tài liệu Dữ liệu</a></li>
+                        <li><a href="../HTML_FILES/ktmt.htm">Tài liệu KTMT</a></li>
+                        <li><a href="../HTML_FILES/other.htm">Tài liệu Khác</a></li>
+                        <li><a href="../HTML_FILES/news.htm">Tin tức</a></li>
+                    </ul>
+                 </div>
+    
+                <!-- Liên kết mạng xã hội(kết nối với chúng tôi) -->
+                <div class="footer--ketnoivoichungtoi">
+                    <h2>Kết nối với chúng tôi</h2>
+                    <div class="icon_social">
+                        <ul>
+                            <li><a href="https://www.facebook.com/kieugiathinh"><i class="fa-brands fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/giathinh_1301"><i class="fa-brands fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="QRCode">
+                        <h2>Tham gia gr Zalo</h2>
+                        <img src="../IMAGES/qrcode/qrcodegrzalo.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <!-- Thông báo bản quyền -->
+                <div class="footer--coppyright">
+                    <h2>&copy; 2024 Learning with GiaThinh. All rights reserved.</h2>
+                </div>
+            </div>
+
+            <!-- Nút chạy lên -->
+            <div class="backtotop">
+                <a href="#" id="backToTop">
+                    <i class='bx bxs-to-top'></i>
+                </a>
+            </div>            
+        </div>
+    </div>
+
+    <!-- <script src="../JS_FILES/index.js"></script> -->
+    <script src="../JS_FILES/index.js"></script>
+    <script type="module" src="../JS_FILES/login.js"></script>
+    <script type="module" src="../JS_FILES/search.js"></script>
+    <script type="module" src="../JS_FILES/news.js"></script>
+</body>
+</html>

@@ -1,0 +1,730 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.DACSN{
+    width: 100%;
+    height: auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Heading */
+/* CSS for Header */
+.heading {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+
+    /* Heading dính ở trên đầu */
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+}
+
+.heading--logo {
+    display: flex;
+    align-items: center;
+}
+
+.heading--logo__logo img {
+    width: 40px;
+    height: auto;
+    border-radius: 7px;
+}
+
+.heading--logo__name a {
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 8px;
+    color: #333;
+    text-decoration: none;
+}
+
+.heading--search {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+    position: relative;
+    /* width: 100%; */
+}
+
+.heading--search__iptSearch{
+    justify-content: center;
+}
+
+.heading--search__iptSearch input {
+    width: 220%;
+    padding: 8px 30px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    color: #666;
+    /* justify-content: center; */
+}
+
+.heading--search__kinhlup {
+    position: absolute;
+    left: 10px;
+    font-size: 1.2em;
+    color: #888;
+    pointer-events: none;
+}
+
+/* Nút đăng ký + đăng nhập */
+.heading--account {
+    display: flex;
+    align-items: center;
+}
+
+.heading--account a {
+    font-size: 1em;
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.heading--account .btnDangNhap {
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: linear-gradient(to right, #ff7e5f, #ff6b6b);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Nút đăng xuất */
+.heading--account button{
+    border-radius: 8px;
+    background: linear-gradient(to right, #ff7e5f, #ff6b6b);
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    margin-right: 30px;
+    /* font-size: 20px; */
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+} 
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .heading {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .heading--search {
+        margin: 10px 0;
+    }
+}
+
+/* Container */
+.container{
+    width: 100%;
+    /* border: 1px solid; */
+    height: auto;
+    display: flex;
+}
+
+/* Menu */
+.container--menu{
+    width: 8%;
+    /* border: 1px solid; */
+    /* display: flex; */
+    flex-shrink: 0;
+}
+
+.container--menu__items{
+    position: sticky;
+    top: 80px;
+    left: 0;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-shrink: 0;
+    width: auto;
+    padding: 0 8px;
+}
+
+.container--menu__items ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container--menu__items ul li{
+    margin-bottom: 4px;
+}
+
+.container--menu__items ul li a {
+    font-size: 0.9em;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #404040;
+    background: #fff;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-decoration: none;
+}
+
+.container--menu__items ul li a i{
+    font-size: 25px;
+    margin-bottom: 4px;
+}
+
+.container--menu__items ul li a.home {
+    background-color: #e4e3e3;
+    color: black;
+}
+
+/* Khi đưa chuột thì xuất hiện nền trắng bao quanh */
+.container--menu__items ul li a:hover {
+    background-color: #e4e3e3;
+    color: black;
+}
+
+/* ************ */
+
+/* Panner */
+.container--content{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid; */
+}
+
+.ads{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    /* cách khoảng với heading */
+    margin-top: 20px;
+}
+.advertise{
+    height: 100%;
+    width: 1000px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+
+    border-radius: 20px;
+}
+.ads-items{
+    display: flex;
+    min-width: 100%;
+    transition: 1.2s;
+}
+.ads-items img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0f1320;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #c2ccf4;
+
+    border-radius: 8px;
+}
+button.prev {
+    left: 140px;
+}
+button.next {
+    right: 140px;
+} 
+.indeximgs{
+    position: absolute;
+    bottom: 13px;
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.index-item{
+    background-color: #9ea3a4;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 50%;
+    border: 2px solid #eaeef1;
+}
+.active{
+    background-color: #26384d;
+}
+/* **** */
+
+/* Topic */
+.topic h2{
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-left: 50px;
+    padding-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ****** */
+
+/* Các ô tài liệu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.documents {
+    display: flex;
+    justify-content: left;
+    gap: 35px;
+    padding: 20px 50px;
+}
+
+
+.document {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: 23%;
+
+    /* border: 1px solid; */
+}
+
+.document:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.document--image img {
+    /* width: 100%;
+    height: auto; */
+    width: 300px;
+    height: 150px;
+}
+
+.document--content {
+    padding: 15px;
+}
+
+.document--content p {
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    margin-bottom: 8px;
+    transition: color 0.3s ease;
+}
+
+.document--content a{
+    text-decoration: none;
+}
+
+.document:hover .document--content p {
+    color: black;
+}
+
+.document:hover .document--content .document--info span{
+    color: black;
+}
+
+/* Test */
+.document--info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    color: #aaa;
+}
+
+.document--info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    /* **** */
+    transition: color 0.3s ease;
+}
+
+.document a{
+    text-decoration: none;
+}
+
+#likeButton{
+    cursor: pointer;
+}
+
+.like-documents{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    gap: 34px;
+    padding: 20px 50px;
+}
+/* *************** */
+
+
+/* Footer */
+.footer{
+    background-image: linear-gradient(45deg, #2b2b2b, #1e1e1e);
+    width: 100%;
+    height: auto;
+    margin-bottom: -10px;
+}
+
+.footer--sup{
+    display: flex;
+    /* width: 100%; */
+}
+
+/* Chia kích thước */
+.footer--user{
+    width: 30%;
+    /* border: 1px solid; */
+    padding-left: 40px;  
+    padding-top: 20px;
+}
+
+.footer--container{
+    width: 25%;
+    /* border: 1px solid; */
+}
+
+.footer--lienketnhanh{
+    width: 20%;
+    /* border: 1px solid; */
+}
+
+.footer--ketnoivoichungtoi{
+    width: 25%;
+    /* border: 1px solid; */
+}
+/* *************** */
+
+.footer--sup ul li {
+    list-style: none;
+}
+
+.footer--sup ul li a{
+    text-decoration: none;
+}
+
+.footer--user__logo{
+    display: flex;
+}
+
+.name{
+    padding-top: 10px;
+}
+
+.name a{
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+.footer--user__information ul li{
+    font-size: 1em;
+    /* font-weight: bold; */
+    color: rgb(141, 141, 141);
+    /* margin-bottom: 10px; */
+    text-align: left;
+}
+
+.footer--container ul li,
+.footer--lienketnhanh ul li{
+    font-size: 1em;
+    /* font-weight: bold; */
+    color: rgb(141, 141, 141);
+    /* margin-bottom: 10px; */
+    text-align: left;
+}
+
+.footer--ketnoivoichungtoi ul li{
+    font-size: 2em;
+    /* font-weight: bold; */
+    color: rgb(141, 141, 141);
+    /* margin-bottom: 10px; */
+    text-align: left;
+}
+
+.footer--container ul li a {
+    display: inline-block; 
+    padding: 5px;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer--container ul li a:hover {
+    background-color: #4b4a4a; 
+    color: white;
+}
+
+.footer--lienketnhanh ul li a {
+    display: inline-block; 
+    padding: 5px;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.footer--lienketnhanh ul li a:hover {
+    background-color: #4b4a4a;
+    color: white;
+}
+
+.logo img{
+    border-radius: 7px;
+}
+
+.footer--coppyright h2{
+    font-size: 1em;
+    /* font-weight: bold; */
+    color: rgb(141, 141, 141);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer--container h2,
+.footer--lienketnhanh h2,
+.footer--ketnoivoichungtoi h2{
+    padding: 5px;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+}
+
+/* ******* */
+.footer--ketnoivoichungtoi {
+    text-align: left; 
+    /* padding: 20px; */
+}
+
+.icon_social ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: left; 
+    gap: 15px; 
+}
+
+.icon_social ul li {
+    display: inline-block; 
+    padding-right: 15px;
+    padding-left: 5px;
+}
+
+.icon_social ul li a {
+    /* font-size: 24px; */
+    color: rgb(141, 141, 141);
+    text-decoration: none; 
+    transition: color 0.3s; 
+    display: inline-flex;
+}
+
+.icon_social ul li a:hover {
+    color: white;
+    transform: scale(1.30);
+}
+
+.QRCode img{
+    width: 150px;
+    height: 150px;
+    padding-left: 5px;
+}
+
+
+/* Nút back to top */
+/* Vị trí và kiểu dáng cho nút Back to Top */
+.backtotop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+/* Đổi màu khi hover */
+.backtotop a i:hover {
+    color: #dc3636;
+    transition: color 0.5s ease;
+}
+
+/* Kiểu dáng của icon */
+.backtotop i {
+    font-size: 40px;
+    color: #ff6b6b;
+}
+
+
+/* Toàn bộ thanh cuộn */
+::-webkit-scrollbar {
+    width: 12px; /* Chiều rộng thanh trượt dọc */
+    height: 12px; /* Chiều cao thanh trượt ngang */
+}
+
+/* Phần track (nền của thanh cuộn) */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Màu nền */
+    border-radius: 10px; /* Bo góc cho track */
+}
+
+/* Phần thumb (phần kéo được trên thanh cuộn) */
+::-webkit-scrollbar-thumb {
+    background: #888; /* Màu của thumb */
+    border-radius: 10px; /* Bo góc */
+}
+
+/* Thumb khi hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Màu khi hover */
+}
+
+/* Thanh cuộn góc (góc giữa cuộn dọc và ngang) */
+::-webkit-scrollbar-corner {
+    background: #f1f1f1; /* Màu nền của góc */
+}
+
+/* CSS tìm kiếm */
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    margin-top: 5px;
+    width: 520px; /* Cho bằng ô input tìm kiếm */
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-item:hover {
+    background-color: #f5f5f5;
+}
+
+.search-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+.search-item span {
+    font-size: 14px;
+    color: #333;
+}
+
+.no-results {
+    padding: 15px;
+    text-align: center;
+    color: #666;
+}
+
+/* Đảm bảo container có position relative để hiển thị đúng kết quả tìm kiếm */
+.heading--search {
+    position: relative;
+}
+
+
+
+/* CSS account */
+/* CSS account */
+#dropdown-menu {
+    position: absolute;
+    top: 53px;
+    right: 50px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 0;
+}
+
+#dropdown-menu button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: black;
+    transition: 0.5s ease;
+    font-weight: 400;
+    padding: 8px 20px;
+}
+
+#dropdown-menu button:hover {
+    background: #e4e3e3;
+}
+
+#dropdown-menu p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.hr {
+    display: flex;
+    justify-content: center;
+    margin: -15px 0;
+}
+
+.hr hr {
+    width: 80%;
+}
+
+.dangtaitailieu button#upload-docs,
+.cactailieudathich button#like-document,
+.dangxuat button#logout-button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.dangtaitailieu button#upload-docs i,
+.cactailieudathich button#like-document i,
+.dangxuat button#logout-button i {
+    font-size: 16px;
+}
